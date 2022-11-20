@@ -18,9 +18,7 @@ export const app = initializeApp({
 });
 
 export const db = getFirestore(app);
-export const storage = getStorage(app)
+export const storage = getStorage(app);
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);

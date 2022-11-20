@@ -31,6 +31,12 @@
     margin-bottom: 10px;
   }
 
+  .input__date {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
   &__actions {
     display: flex;
     align-items: center;

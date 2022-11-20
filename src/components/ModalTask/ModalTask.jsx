@@ -84,7 +84,7 @@ export const ModalTask = ({ opened, onClose, onSave, action, task }) => {
       className="modal__wrapper"
     >
       <form onSubmit={onSaveWithValidation} className="modal">
-        <h3 className="modal__title">Добавить Задачу</h3>
+        <h3 className="modal__title">{`${action} Задачу`}</h3>
         <div className="modal__body">
           <input
             value={form.title}
@@ -102,14 +102,18 @@ export const ModalTask = ({ opened, onClose, onSave, action, task }) => {
             name="description"
             placeholder="description"
           />
-          <input
-            required
-            value={form.completeDate}
-            onChange={onChange}
-            name="completeDate"
-            type="date"
-            placeholder="set date"
-          />
+          <label className="input__date">
+            Выполнить до:
+            <input
+              required
+              value={form.completeDate}
+              onChange={onChange}
+              name="completeDate"
+              type="date"
+              placeholder="set date"
+            />
+          </label>
+
           {form?.errors["date"] && (
             <p className="modal__error">{form?.errors["date"]}</p>
           )}
