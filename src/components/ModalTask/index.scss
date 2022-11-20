@@ -1,0 +1,43 @@
+.modal {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px;
+  gap: 5px;
+  width: 300px;
+  padding: 15px;
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(0deg 0% 55% / 69%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__error {
+    color: red;
+  }
+}
